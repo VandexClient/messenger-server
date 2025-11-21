@@ -3,8 +3,5 @@ services:
     name: messenger-server
     env: python
     plan: free
-    buildCommand: ""
-    startCommand: cd server && python server.py
-    envVars:
-      - key: PORT
-        value: 10000
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
