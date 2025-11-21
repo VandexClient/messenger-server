@@ -4,7 +4,8 @@ import threading
 import time
 from datetime import datetime
 import os
-import eventlet
+from gevent import monkey
+monkey.patch_all()
 
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
